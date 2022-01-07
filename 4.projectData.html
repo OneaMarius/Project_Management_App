@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Project</title>
+      <link rel="stylesheet" href="css/4.projectData.css" />
+      <link rel="stylesheet" href="css/5.common.css" />
+      <link rel="stylesheet" href="css/meniu.css" />
+      <link rel="icon" type="image/x-icon" href="CSS/newproj.png" />
+      <script src="js/4.projectData.js"></script>
+      <script src="js/5.common.js"></script>
+   </head>
+
+   <body onload="checkLogin(), prData(), showProjectEmployees()">
+      <div class="BigBox">
+         <div class="Meniu">
+            <div class="pageName">
+               <div>Project</div>
+            </div>
+            <div class="box box1">
+               <a class="meniuButton" id="button1" href="1.employees.html"
+                  >Employees</a
+               >
+            </div>
+            <div class="box box2">
+               <a class="meniuButton" id="button2" href="2.projects.html"
+                  >Projects</a
+               >
+            </div>
+            <div class="box box3">
+               <a
+                  class="meniuButton"
+                  id="button3"
+                  href="index.html"
+                  onclick="logout()"
+                  >Logout</a
+               >
+            </div>
+            <div class="box box4">
+               <a
+                  id="button4"
+                  title="Designed By"
+                  href="https://www.linkedin.com/in/marius-onea/"
+               ></a>
+            </div>
+         </div>
+
+         <div class="bigBox">
+            <div class="boxA">
+               <div id="test" class="boxA1"></div>
+
+               <div class="boxA2">
+                  <div class="userDataA">Start Date:</div>
+                  <div class="userDataB" id="prStartDate"></div>
+                  <div class="userDataA">Duration:</div>
+                  <div class="userDataB" id="prDuration"></div>
+                  <div class="userDataA">Needed Employees:</div>
+                  <div class="userDataB" id="prEmpNeed"></div>
+                  <div class="userDataA">Assigned Employees:</div>
+                  <div class="userDataB" id="prEmpWork"></div>
+                  <div class="userDataA">Project Leader:</div>
+                  <div class="userDataB" id="prLeader"></div>
+                  <div class="userDataA">Added:</div>
+                  <div class="userDataB" id="prAdded"></div>
+               </div>
+            </div>
+
+            <div class="boxB">
+               <div class="boxB1">
+                  <div class="boxB11">
+                     <div id="prName"></div>
+                     <div>
+                        <select id="prSelect"></select>
+                        <div id="addButtonDiv">
+                           <button id="prAdd" onclick="SelectEmp()">Add</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="boxB2">
+                  <div id="projectTableDiv">
+                     <table id="projectTable">
+                        <tr>
+                           <th>No</th>
+                           <th>Employee Name</th>
+                           <th>Employee Phone</th>
+                           <th>Employee Email</th>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

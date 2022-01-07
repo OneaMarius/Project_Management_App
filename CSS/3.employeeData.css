@@ -1,0 +1,218 @@
+
+
+.bigBox {
+    width: auto;
+    height:85vmin;
+    min-height: 800px;
+    border: 2px solid #5f5f5f;
+    position: relative;
+    display: flex;
+}
+
+.boxA {
+    width: 300px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.boxB {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.boxA1 {
+    width: auto;
+    height: 40%;
+    color: white;
+    font-size: 24px;
+}
+.boxA11 {
+    width: auto;
+    height: 100%;
+    background-color: #9f9f9f;
+    background-image: url(boy.png);
+    background-size: 275px 275px;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.boxA12 {
+    width: auto;
+    height: 100%;
+    background-color: #9f9f9f;
+    background-image: url(girl.png);
+    background-size: cover;
+}
+
+.boxA2 {
+    width: auto;
+    height: 60%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.boxB1 {
+    width: auto;
+    height: 40%;
+    background-color: whitesmoke;
+}
+
+.boxB2 {
+    width: auto;
+    height: 60%;
+    background-image: radial-gradient(white, rgb(119, 118, 118));
+    border-top: 2px solid black;
+}
+
+.boxB11 {
+    width: 500px;
+    height: 200px;
+    margin:  auto;
+    top: 50px;
+    position: relative;
+}
+
+#empName {
+    width: 500px;
+    height: 70px;
+    font-size: 50px;
+    font-family:fantasy;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    overflow: hidden;
+}
+
+#select {
+    font-size: 2rem;
+    text-overflow: ellipsis;
+    top: 40px;
+    left: 100px;
+    position: relative;
+    width:300px;
+}
+
+#add {
+    border-radius: 15px;
+    padding: 3px 10px;
+    border: 2px solid green;
+    box-shadow: 1px 1px deepskyblue;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#addButtonDiv {
+    position: relative;
+    width: 76px;
+    margin: 0px auto;
+    margin-top: 54px;
+}
+
+.userDataA {
+    width: 300px;
+    height: 30px;
+    margin:2px;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(43, 43, 43);
+}
+
+.userDataB {
+    width: 280px;
+    height: 50px;
+    line-height: 50px;
+    border:2px solid black;
+    border-radius: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    overflow:hidden ;
+    text-align: left;
+    padding-left: 15px;
+    text-align: center;
+}
+
+#vacationTitle {
+    text-align: center;
+    position: relative;
+    top: 25px;
+    font-size: 44px;
+}
+
+#leaveButtonDiv {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    margin-bottom: 25px;
+}
+
+#leaveButton {
+    height: 30px;
+    border-radius: 25px;
+    color: rgb(14 69 193);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+}
+
+#leaveFormDiv {
+    position: relative;
+    top: 50px;
+}
+
+#leaveForm {
+    height: 200px;
+    background-color: white;
+}
+
+#addLeave {
+    margin: 10px auto;
+    width: 100px;      
+}
+
+#vacationTable {
+    background-color: white;
+    position: relative;
+    top: 50px;
+}
+
+.totalDays {
+    font-weight: bold;
+}
+
+#addLeaveButton {
+    height: 30px;
+    width: 150px;
+    margin: 0px auto;
+    border-radius: 25px;
+    color: rgb(14 69 193);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+}
+
+#deleteB {
+    height: 25px;
+    width: 70px;
+    margin: 0px auto;
+    border-radius: 25px;
+    color: rgb(14 69 193);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+}
+
+#resetB {
+    height: 25px;
+    width: 120px;
+    margin: 0px auto;
+    border-radius: 25px;
+    color: rgb(14 69 193);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+}

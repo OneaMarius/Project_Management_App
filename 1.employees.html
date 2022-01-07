@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Employees</title>
+      <link rel="stylesheet" href="css/1.index.css" />
+      <link rel="stylesheet" href="css/5.common.css" />
+      <link rel="stylesheet" href="css/meniu.css" />
+      <link rel="icon" type="image/x-icon" href="CSS/newproj.png" />
+      <script src="js/1.employees.js"></script>
+      <script src="js/5.common.js"></script>
+   </head>
+
+   <body onload="checkLogin(), noEmplyees(), changeTable(), employeesNameArr()">
+      <div class="BigBox">
+         <div class="Meniu">
+            <div class="pageName">
+               <div>Employees</div>
+            </div>
+            <div class="box box1">
+               <a class="meniuButton" id="button1" href="1.employees.html"
+                  >Employees</a
+               >
+            </div>
+            <div class="box box2">
+               <a class="meniuButton" id="button2" href="2.projects.html"
+                  >Projects</a
+               >
+            </div>
+            <div class="box box3">
+               <a
+                  class="meniuButton"
+                  id="button3"
+                  href="index.html"
+                  onclick="logout()"
+                  >Logout</a
+               >
+            </div>
+            <div class="box box4">
+               <a
+                  id="button4"
+                  title="Designed By"
+                  href="https://www.linkedin.com/in/marius-onea/"
+               ></a>
+            </div>
+         </div>
+
+         <div class="container">
+            <div id="newEmpDiv">
+               <button id="new" onclick="showFormAdd()">
+                  Add New Employee
+               </button>
+               <button id="reset" type="reset" onclick="resetTable()">
+                  Reset Table
+               </button>
+            </div>
+
+            <div id="noEmplyees">No employees added</div>
+
+            <div id="formDivAdd" style="display: none">
+               <form id="empFormAdd">
+                  <div>
+                     <label for="name">Name:</label
+                     ><span class="error" id="error1A">Incorrect name</span>
+                  </div>
+                  <input
+                     id="name"
+                     type="text"
+                     placeholder="Popescu Ion"
+                     onkeyup="checkName('name','error1A')"
+                  />
+
+                  <div>
+                     <label for="phone">Phone:</label
+                     ><span class="error" id="error2A">Incorrect phone</span>
+                  </div>
+                  <input
+                     id="phone"
+                     type="phone"
+                     placeholder="0720111222"
+                     onkeyup="checkPhone('phone','error2A')"
+                  />
+
+                  <div>
+                     <label for="email">Email:</label
+                     ><span class="error" id="error3A">Incorrect email</span>
+                  </div>
+                  <input
+                     id="email"
+                     type="email"
+                     placeholder="email@example.com"
+                     onkeyup="checkEmail('email','error3A')"
+                  />
+
+                  <div>
+                     <label for="birthdate">Birthdate:</label
+                     ><span class="error" id="error4A"
+                        >Incorrect birthdate</span
+                     >
+                  </div>
+                  <input
+                     id="birthdate"
+                     type="date"
+                     onchange="checkBirthdate('birthdate','error4A')"
+                  />
+
+                  <div>
+                     <label for="sex">Sex:</label
+                     ><span class="error" id="error5A">Select one option</span>
+                  </div>
+                  <select id="sex" onchange="checkSex('sex','error5A')">
+                     <option>-</option>
+                     <option>M</option>
+                     <option>F</option>
+                  </select>
+
+                  <button
+                     id="addButton"
+                     disabled
+                     type="submit"
+                     onclick="newEmp()"
+                  >
+                     Add Employee
+                  </button>
+                  <button id="cancelButton" type="button" onclick="cancelEmp()">
+                     Cancel
+                  </button>
+               </form>
+            </div>
+
+            <div id="formDivEdit" style="display: none">
+               <form id="empFormEdit" onclick="editCheck()">
+                  <div>
+                     <label for="name1">Name:</label
+                     ><span class="error" id="error1E">Incorrect name</span>
+                  </div>
+                  <input
+                     id="name1"
+                     type="text"
+                     placeholder="Popescu Ion"
+                     onkeyup="checkName('name1','error1E')"
+                  />
+
+                  <div>
+                     <label for="phone1">Phone:</label
+                     ><span class="error" id="error2E">Incorrect phone</span>
+                  </div>
+                  <input
+                     id="phone1"
+                     type="phone"
+                     placeholder="0720111222"
+                     onkeyup="checkPhone('phone1','error2E')"
+                  />
+
+                  <div>
+                     <label for="email1">Email:</label
+                     ><span class="error" id="error3E">Incorrect email</span>
+                  </div>
+                  <input
+                     id="email1"
+                     type="email"
+                     placeholder="email@example.com"
+                     onkeyup="checkEmail('email1','error3E')"
+                  />
+
+                  <div>
+                     <label for="birthdate1">Birthdate:</label
+                     ><span class="error" id="error4E"
+                        >Incorrect birthdate</span
+                     >
+                  </div>
+                  <input
+                     id="birthdate1"
+                     type="date"
+                     onchange="checkBirthdate('birthdate1','error4E')"
+                  />
+
+                  <div>
+                     <label for="sex1">Sex:</label
+                     ><span class="error" id="error5E">Select one option</span>
+                  </div>
+                  <select id="sex1" onchange="checkSex('sex1','error5E')">
+                     <option>-</option>
+                     <option>M</option>
+                     <option>F</option>
+                  </select>
+
+                  <button
+                     id="editButton"
+                     disabled
+                     type="submit"
+                     onclick="editEmp()"
+                  >
+                     Edit Employee
+                  </button>
+                  <button id="cancelButton" type="button" onclick="cancelEmp()">
+                     Cancel
+                  </button>
+               </form>
+            </div>
+
+            <div id="tableDiv">
+               <table id="table"></table>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

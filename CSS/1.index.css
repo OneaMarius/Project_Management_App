@@ -1,0 +1,34 @@
+
+#newEmpDiv {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#empFormAdd {
+    font-size: 24px;
+}
+
+#noEmplyees {
+    display: none;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#phoneLink {
+    text-decoration: none;
+    color: black;
+}
+
+#phoneLink:hover {
+    color: red;
+}
+#emailLink {
+    text-decoration: none;
+    color: black;
+}
+
+#emailLink:hover {
+    color: blue;
+}
+

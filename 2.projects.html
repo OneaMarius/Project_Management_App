@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Projects</title>
+      <link rel="stylesheet" href="css/2.projects.css" />
+      <link rel="stylesheet" href="css/5.common.css" />
+      <link rel="stylesheet" href="css/meniu.css" />
+      <link rel="icon" type="image/x-icon" href="CSS/newproj.png" />
+      <script src="js/2.projects.js"></script>
+      <script src="js/5.common.js"></script>
+   </head>
+
+   <body
+      onload="checkLogin(), noProjects(), changeTable(), projectNameArr(), colorWorkFlow ()"
+   >
+      <div class="BigBox">
+         <div class="Meniu">
+            <div class="pageName">
+               <div>Projects</div>
+            </div>
+            <div class="box box1">
+               <a class="meniuButton" id="button1" href="1.employees.html"
+                  >Employees</a
+               >
+            </div>
+            <div class="box box2">
+               <a class="meniuButton" id="button2" href="2.projects.html"
+                  >Projects</a
+               >
+            </div>
+            <div class="box box3">
+               <a
+                  class="meniuButton"
+                  id="button3"
+                  href="index.html"
+                  onclick="logout()"
+                  >Logout</a
+               >
+            </div>
+            <div class="box box4">
+               <a
+                  id="button4"
+                  title="Designed By"
+                  href="https://www.linkedin.com/in/marius-onea/"
+               ></a>
+            </div>
+         </div>
+
+         <div class="container">
+            <div id="newProjDiv">
+               <button id="new" onclick="showFormAddP()">
+                  Add New Project
+               </button>
+               <button id="reset" type="reset" onclick="resetTable()">
+                  Reset Table
+               </button>
+            </div>
+
+            <div id="noProjects">No projects added</div>
+
+            <div id="formProjDivAdd" style="display: none">
+               <form id="formProj">
+                  <div>
+                     <label for="pName">Project Name</label
+                     ><span class="error" id="error1A">Incorrect name</span>
+                  </div>
+                  <input
+                     id="pName"
+                     type="text"
+                     onkeyup="checkProjName('pName','error1A')"
+                  />
+
+                  <div>
+                     <label for="pDuration">Project Duration</label
+                     ><span class="error" id="error2A">Incorrect value</span>
+                  </div>
+                  <input
+                     id="pDuration"
+                     type="number"
+                     placeholder="1-24 months"
+                     onchange="checkProjDuration('pDuration','error2A')"
+                  />
+
+                  <div>
+                     <label for="pStartDate">Start Date</label
+                     ><span class="error" id="error3A">Incorrect date</span>
+                  </div>
+                  <input
+                     id="pStartDate"
+                     type="date"
+                     onchange="checkProjStartDate('pStartDate','error3A')"
+                  />
+
+                  <div>
+                     <label for="pEmpNeed">Needed Employees</label
+                     ><span class="error" id="error4A">Incorrect value</span>
+                  </div>
+                  <input
+                     id="pEmpNeed"
+                     type="number"
+                     placeholder=">0"
+                     onchange="checkProjEmpNeed('pEmpNeed','error4A')"
+                  />
+
+                  <button
+                     id="addButton"
+                     disabled
+                     type="submit"
+                     onclick="newProject()"
+                  >
+                     Add Project
+                  </button>
+                  <button
+                     id="cancelButton"
+                     type="button"
+                     onclick="cancelProj()"
+                  >
+                     Cancel
+                  </button>
+               </form>
+            </div>
+
+            <div id="formProjDivEdit" style="display: none">
+               <form id="formProj">
+                  <div>
+                     <label for="pName1">Project Name</label
+                     ><span class="error" id="error1E">Incorrect name</span>
+                  </div>
+                  <input
+                     id="pName1"
+                     type="text"
+                     onkeyup="checkProjName('pName1','error1E')"
+                  />
+
+                  <div>
+                     <label for="pDuration1">Project Duration</label
+                     ><span class="error" id="error2E">Incorrect value</span>
+                  </div>
+                  <input
+                     id="pDuration1"
+                     type="number"
+                     placeholder="1-24 months"
+                     onchange="checkProjDuration('pDuration1','error2E')"
+                  />
+
+                  <div>
+                     <label for="pStartDate1">Start Date</label
+                     ><span class="error" id="error3E">Incorrect date</span>
+                  </div>
+                  <input
+                     id="pStartDate1"
+                     type="date"
+                     onchange="checkProjStartDate('pStartDate1','error3E')"
+                  />
+
+                  <div>
+                     <label for="pEmpNeed1">Needed Employees</label
+                     ><span class="error" id="error4E">Incorrect value</span>
+                  </div>
+                  <input
+                     id="pEmpNeed1"
+                     type="number"
+                     placeholder=">0"
+                     onchange="checkProjEmpNeed('pEmpNeed1','error4E')"
+                  />
+
+                  <button
+                     id="editButton"
+                     disabled
+                     type="submit"
+                     onclick="editProject()"
+                  >
+                     Edit Project
+                  </button>
+                  <button
+                     id="cancelButton"
+                     type="button"
+                     onclick="cancelProj()"
+                  >
+                     Cancel
+                  </button>
+               </form>
+            </div>
+
+            <div id="tableProjDiv">
+               <table id="table"></table>
+               <div id="legend">
+                  <div id="span0">Legend:</div>
+                  <div id="span1">Lower than </div>
+                  <div id="span2">100%</div>
+                  <div id="span3">Higher than </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

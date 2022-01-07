@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Login</title>
+      <link rel="stylesheet" href="css/0.login.css" />
+      <link rel="stylesheet" href="css/meniu.css" />
+
+      <link rel="icon" type="image/x-icon" href="CSS/newproj.png" />
+      <script src="js/0.login.js"></script>
+      <script src="js/5.common.js"></script>
+   </head>
+   <body>
+      <div class="BigBox">
+         <!-- <div id="top-bar-left" onclick="goHome()"></div> -->
+         <div class="Meniu">
+            <div class="pageName">
+               <div>Login</div>
+            </div>
+            <!-- <div class="box box1">
+               <a class="meniuButton" id="button1" href="index.html"
+                  >Employees</a
+               >
+            </div>
+            <div class="box box2">
+               <a class="meniuButton" id="button2" href="2.projects.html"
+                  >Projects</a
+               >
+            </div> -->
+            <!-- <div class="box box3">
+                <a class="meniuButton" id="button3" href="0.login.html" onclick="logout()">Login</a>
+            </div> -->
+            <div class="box box4">
+               <a
+                  id="button4"
+                  title="Designed By"
+                  href="https://www.linkedin.com/in/marius-onea/"
+               ></a>
+            </div>
+         </div>
+         <div class="boxA">
+            <div class="boxB">LOGIN</div>
+            <div class="boxC">
+               <div class="insideBox">
+                  <label for="username">Username: </label>
+                  <input id="username" type="text" size="30" />
+               </div>
+               <div class="insideBox">
+                  <label for="password">Password: </label>
+                  <input id="password" type="password" size="30" />
+               </div>
+               <div class="logButtonDiv">
+                  <button
+                     onclick="login()"
+                     title="Login with username and password"
+                     id="loginButton"
+                  >
+                     Login
+                  </button>
+                  <button
+                     onclick="loginView()"
+                     title="Login without username and password"
+                     id="loginButton"
+                  >
+                     View Site
+                  </button>
+               </div>
+               <div id="infoBox">
+                  <div id="error">The username or password is incorrect</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

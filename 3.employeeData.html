@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Employee</title>
+      <link rel="stylesheet" href="css/meniu.css" />
+      <link rel="stylesheet" href="css/3.employeeData.css" />
+      <link rel="stylesheet" href="css/5.common.css" />
+      
+      <link rel="icon" type="image/x-icon" href="CSS/newproj.png" />
+      <script src="js/3.employeeData.js"></script>
+      <script src="js/5.common.js"></script>
+   </head>
+
+   <body
+      onload="checkLogin(),  EmpData(), changeAvatar(), selectProj(), showVacationTable()"
+   >
+      <div class="BigBox">
+         <div class="Meniu">
+            <div class="pageName">
+               <div>Employee</div>
+            </div>
+            <div class="box box1">
+               <a class="meniuButton" id="button1" href="1.employees.html"
+                  >Employees</a
+               >
+            </div>
+            <div class="box box2">
+               <a class="meniuButton" id="button2" href="2.projects.html"
+                  >Projects</a
+               >
+            </div>
+            <div class="box box3">
+               <a
+                  class="meniuButton"
+                  id="button3"
+                  href="index.html"
+                  onclick="logout()"
+                  >Logout</a
+               >
+            </div>
+            <div class="box box4">
+               <a
+                  id="button4"
+                  title="Designed By"
+                  href="https://www.linkedin.com/in/marius-onea/"
+               ></a>
+            </div>
+         </div>
+
+         <div class="bigBox">
+            <div class="boxA">
+               <div id="boxA1" class="boxA1"></div>
+
+               <div class="boxA2">
+                  <div class="userDataA">Phone:</div>
+                  <div class="userDataB" id="empPhone"></div>
+                  <div class="userDataA">Email:</div>
+                  <div class="userDataB" id="empEmail"></div>
+                  <div class="userDataA">Sex:</div>
+                  <div class="userDataB" id="empSex"></div>
+                  <div class="userDataA">Age:</div>
+                  <div class="userDataB" id="empAge"></div>
+                  <div class="userDataA">Birthdate:</div>
+                  <div class="userDataB" id="empBirthdate"></div>
+                  <div class="userDataA">Hire Date:</div>
+                  <div class="userDataB" id="empHired"></div>
+               </div>
+            </div>
+
+            <div class="boxB">
+               <div class="boxB1">
+                  <div class="boxB11">
+                     <div id="empName"></div>
+                     <select id="select"></select>
+                     <div id="addButtonDiv">
+                        <button id="add" onclick="workFlow()">Add</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="boxB2">
+                  <div id="vacationTitle">Vacation</div>
+                  <div id="leaveButtonDiv">
+                     <button id="leaveButton" onclick="addNewLeave()">
+                        Add Leave
+                     </button>
+                  </div>
+
+                  <div id="leaveFormDiv" style="display: none">
+                     <form id="leaveForm">
+                        <div>
+                           <label for="sDate">Start Date:</label
+                           ><span class="error" id="error1"
+                              >Incorrect date</span
+                           >
+                        </div>
+                        <input
+                           id="sDate"
+                           type="date"
+                           onchange="checkProjStartDate('sDate','error1')"
+                        />
+
+                        <div>
+                           <label for="eDate">End Date:</label
+                           ><span class="error" id="error2"
+                              >Incorrect date</span
+                           >
+                        </div>
+                        <input
+                           id="eDate"
+                           type="date"
+                           onchange="checkProjEndDate('eDate','error2')"
+                        />
+
+                        <button
+                           id="addLeaveButton"
+                           disabled
+                           type="reset"
+                           onclick="newVac()"
+                        >
+                           Add
+                        </button>
+                     </form>
+                  </div>
+
+                  <div id="vacationTableDiv">
+                     <table id="vacationTable">
+                        <tr>
+                           <th>No</th>
+                           <th>Start Date</th>
+                           <th>End Date</th>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

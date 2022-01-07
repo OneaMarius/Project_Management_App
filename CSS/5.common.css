@@ -1,0 +1,143 @@
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    font-size: 24px;
+    border: 5px double black;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+input {
+    font-size: 20px;
+}
+
+select {
+    font-size: 20px;
+}
+
+table {
+    background-color: whitesmoke;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    margin: 0px auto;
+    border: 2px solid red;
+    border-collapse: collapse;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+th, td {
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px rgb(43, 43, 43);
+    padding: 5px;
+}
+
+.nameLink {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nameLink:hover {
+    color: blue;
+}
+
+.edit {
+    border-radius: 15px;
+    margin-right: 5px;
+    border: 2px solid green;
+    box-shadow: 1px 1px deepskyblue;
+    font-weight: bold;
+    background-color: #9f9f9f;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.edit:hover {
+    background-color: green;
+}
+
+.delete {
+    border-radius: 15px;
+    border: 2px solid red;
+    box-shadow: 1px 1px deepskyblue;
+    font-weight: bold;
+    background-color: #9f9f9f;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: red;
+}
+
+#new {
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px black;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+#reset {
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px black;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+#addButton {
+    font-size: 20px;
+    width: 158px;
+    margin: 0px auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: ghostwhite;
+    box-shadow: 2px 2px 2px darkblue;
+    cursor: pointer;
+}
+
+#editButton {
+    font-size: 20px;
+    width: 158px;
+    margin: 0px auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: ghostwhite;
+    box-shadow: 2px 2px 2px darkblue;
+    cursor: pointer;
+}
+
+#cancelButton {
+    font-size: 20px;
+    width: 100px;
+    margin: 0px auto;
+    margin-top: 5px;
+    border-radius: 15px;
+    background-color: ghostwhite;
+    box-shadow: 2px 2px 2px darkblue;
+    cursor: pointer;
+}
+
+.error {
+    margin-left: 10px;
+    color: red;
+    font-style: italic;
+    font-size: 14px;
+}
+

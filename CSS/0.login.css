@@ -1,0 +1,116 @@
+
+
+.boxA {
+    width: 500px;
+    height: 40vmin;
+    min-height: 350px;
+    border: 4px double black;
+    box-shadow: 3px 3px 3px;
+    position: relative;
+    margin: 20vmin auto;
+    background-color: aliceblue;
+    /* background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;   */
+}
+
+.boxB {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.boxC {
+    height: 70%;
+}
+
+.insideBox {
+    
+    height: 25%;   
+    margin:auto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#infoBox {
+    height: 20%;
+    text-align: center;
+    position: relative;
+    color: red;
+    display: none;   
+}
+
+.logButtonDiv {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 75px;
+    height: 25px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#username {
+    margin-left: 10px;
+    height: 20px;
+    border: 3px solid black;
+}
+
+#password {
+    margin-left: 10px;
+    height: 20px;
+    border: 3px solid black;
+}
+
+
+
+#loginButton {
+    border-radius: 15px;
+    margin-right: 5px;
+    padding: 3px 10px;
+    border: 2px solid green;
+    box-shadow: 1px 1px deepskyblue;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0px 10px;
+    
+}
+/* #loginButton:hover {
+    cursor: pointer;
+} */
+
+#top-bar-left {
+    position: absolute;
+    left: 46%;
+    top:0%;
+    /* border: 2px solid green; */
+    width: 8vh;
+    height: 8vh;
+    background-image: url(../../../home-page.png);
+    background-size: 7vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2vmax;
+    color: white;
+    cursor: pointer;
+    margin: 0px 10px;
+    z-index: 1;
+    
+    border-radius: 25px;
+    box-shadow: 0 0 0  5px #7f7f7f;
+ }
+ 
+ #top-bar-left:hover {
+    background-color: #08bcf3;
+ }
